@@ -26,4 +26,5 @@ setup(name='ministac',
           'geoalchemy2',
           'sqlalchemy',
           'shapely',
+          'jsonschema'
       ])
