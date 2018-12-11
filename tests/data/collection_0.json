@@ -1,0 +1,40 @@
+{
+  "stac_version": "0.6.0",
+  "id": "landsat_sr_8",
+  "title": "Landsat 8, processed to surface reflectance",
+  "description": "Landsat 8 data in scenes cut along the WRS2 grid",
+  "license": "proprietary",
+  "keywords": [
+    "Landsat",
+    "usgs",
+    "espa"
+  ],
+  "providers": [
+    {
+      "name": "Espa/USGS",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://landsat.usgs.gov/landsat-surface-reflectance-data-products"
+    }
+  ],
+  "extent": {
+    "spatial": [
+      -180.0,
+      -56.0,
+      180.0,
+      83.0
+    ],
+    "temporal": [
+      "2013-02-01T00:00:00Z",
+      null
+    ]
+  },
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://github.com/loicdtx/ministac/tests/data/collection_0.json"
+    }
+  ]
+}
