@@ -3,6 +3,7 @@ from sqlalchemy.types import Numeric
 
 from ministac.db import session_scope
 from ministac.models import Item, Collection
+from ministac.globals import COLLECTION_SCHEMA
 
 __version__ = '0.0.1'
 
@@ -14,7 +15,7 @@ def add_items(items, collection):
         item (dict or list): The item to add, or list of items
         collection (str): The name of the collection
     """
-    if not isinstance(item, list):
+    if not isinstance(items, list):
         items = [items]
     with session_scope() as session:
         collection = session.query(Collection).filter_by(name=collection).first()

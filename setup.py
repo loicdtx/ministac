@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 import os
 
 # Parse the version from the main __init__.py
-with open('fta/__init__.py') as f:
+with open('ministac/__init__.py') as f:
     for line in f:
         if line.find("__version__") >= 0:
             version = line.split("=")[1].strip()
@@ -26,5 +26,6 @@ setup(name='ministac',
           'geoalchemy2',
           'sqlalchemy',
           'shapely',
-          'jsonschema'
+          'jsonschema',
+          'psycopg2'
       ])

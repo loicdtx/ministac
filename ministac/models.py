@@ -31,7 +31,7 @@ class Item(Base):
     time = Column(DateTime, index=True)
     meta = Column(JSONB)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
-    collection_id = Column(Integer, ForeignKey('collection.id'), index=True)
+    collection_id = Column(Integer, ForeignKey('collections.id'), index=True)
     UniqueConstraint(collection_id, name)
 
     collection = relationship("Collection", back_populates="items")
@@ -52,7 +52,7 @@ class Item(Base):
         if isinstance(collection, str):
             collection = session.query(Collection).filter_by(name=collection).first()
         # Validate geojson feature
-        jsonschema.validate(feature, ITEM_SCHEMA)
+        validate(feature, ITEM_SCHEMA)
         # Build geom
         geom = from_shape(shape(feature['geometry']), 4326)
         # Parse datetime
