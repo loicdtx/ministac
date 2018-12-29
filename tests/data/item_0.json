@@ -1,130 +1,87 @@
 {
-  "id": "LC81530252014153LGN00",
-  "type": "Feature",
-  "bbox": [ 49.16354,72.27502,51.36812,75.67662 ],
-  "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-      [
-        [
-          [
-            51.33855,
-            72.27502
-          ],
-          [
-            51.36812,
-            75.70821
-          ],
-          [
-            49.19092,
-            75.67662
-          ],
-          [
-            49.16354,
-            72.39640
-          ],
-          [
-            51.33855,
-            72.27502
-          ]
+    "id": "LC08_L1TP_028046_20171207_20171207_01_RT",
+    "bbox": [
+        -102.99591,
+        19.14269,
+        -100.74796,
+        21.30377
+    ],
+    "type": "Feature",
+    "assets": {
+        "nir": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band5.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "red": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band4.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "blue": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band2.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "green": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band3.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir1": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band6.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir2": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band7.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "metadata": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT.xml",
+            "type": "xml"
+        },
+        "pixel_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_pixel_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "radsat_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_radsat_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        }
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -102.99591,
+                    21.26565
+                ],
+                [
+                    -102.94201,
+                    19.14269
+                ],
+                [
+                    -100.74796,
+                    19.1767
+                ],
+                [
+                    -100.77192,
+                    21.30377
+                ],
+                [
+                    -102.99591,
+                    21.26565
+                ]
+            ]
         ]
-      ]
-    ]
-  },
- 
-  "properties": {
-    "datetime": "2014-06-02T09:22:02Z",
-    "c:id": "L1T",
-    "c:name": "Landsat L1T",
-    "c:description": "Landat 8 imagery that is radiometrically calibrated and orthorectified using ground points and Digital Elevation Model (DEM) data to correct relief displacement.",
-    "eo:gsd": 30.0,
-    "eo:cloud_cover" : 10,
-    "eo:off_nadir" : 0.000,
-    "eo:azimuth": 0.00,
-    "eo:sun_azimuth" : 149.01607154,
-    "eo:sun_elevation" : 59.21424700,
-    "landsat:wrs_path": 153,
-    "landsat:wrs_row": 25,
-    "landsat:earth_sun_distance": 1.0141560,
-    "landsat:ground_control_points_verify": 114,
-    "landsat:geometric_rmse_model": 7.562,
-    "landsat:image_quality_tirs": 9,
-    "landsat:ground_control_points_model": 313,
-    "landsat:geometric_rmse_model_x": 5.96,
-    "landsat:geometric_rmse_model_y": 4.654,
-    "landsat:geometric_rmse_verify": 5.364,
-    "landsat:image_quality_oli": 9
-  },
-
-  "links": [
-    { "rel":"self", "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00.json"},
-    { "rel":"alternate", "href": "https://landsatonaws.com/L8/153/025/LC81530252014153LGN00", "type": "text/html"},
-    { "rel":"root", "href": "http://landsat-pds.s3.amazonaws.com/L8/L1T-collection.json"}
-  ],
-
-  "assets" :{
-    "thumbnail": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_thumb_large.jpg",
-      "type": "image/jpeg"
     },
-    "metadata": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_MTL.txt",
-      "type": "mtl"
-    },
-    "B1": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B1.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [0]
-    },
-    "B2": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B2.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [1]
-    },
-    "B3": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B3.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [2]
-    },
-    "B4": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B4.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [3]
-    },
-    "B5": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B5.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [4]
-    },
-    "B6": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B6.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [5]
-    },
-    "B7": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B7.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [6]
-    },
-    "B8": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B8.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [7]
-    },
-    "B9": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B9.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [8]
-    },
-    "B10": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B10.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [9]
-    },
-    "B11": {
-      "href": "http://landsat-pds.s3.amazonaws.com/L8/153/025/LC81530252014153LGN00/LC81530252014153LGN00_B11.TIF",
-      "type": "image/vnd.stac.geotiff",
-      "eo:bands": [10]
+    "properties": {
+        "eo:crs": "+proj=utm +zone=14",
+        "eo:gsd": 30,
+        "datetime": "2017-12-07T17:12:07Z",
+        "eo:sensor": "OLI_TIRS",
+        "c:description": "Landsat data processed to surface reflectance on the espa platform",
+        "eo:spacecraft": "LANDSAT_8",
+        "eo:cloud_cover": 9.77,
+        "landsat:wrs_row": "46",
+        "landsat:wrs_path": "28",
+        "eo:processing_level": "L1"
     }
-  }
- }
+}
