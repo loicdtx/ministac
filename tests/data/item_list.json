@@ -1,0 +1,261 @@
+[{
+    "id": "LC08_L1TP_028046_20171207_20171207_01_RT",
+    "bbox": [
+        -102.99591,
+        19.14269,
+        -100.74796,
+        21.30377
+    ],
+    "type": "Feature",
+    "assets": {
+        "nir": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band5.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "red": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band4.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "blue": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band2.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "green": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band3.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir1": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band6.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir2": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_sr_band7.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "metadata": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT.xml",
+            "type": "xml"
+        },
+        "pixel_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_pixel_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "radsat_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280462017120701RT-SC20171213123909/LC08_L1TP_028046_20171207_20171207_01_RT_radsat_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        }
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -102.99591,
+                    21.26565
+                ],
+                [
+                    -102.94201,
+                    19.14269
+                ],
+                [
+                    -100.74796,
+                    19.1767
+                ],
+                [
+                    -100.77192,
+                    21.30377
+                ],
+                [
+                    -102.99591,
+                    21.26565
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "eo:crs": "+proj=utm +zone=14",
+        "eo:gsd": 30,
+        "datetime": "2017-12-07T17:12:07Z",
+        "eo:sensor": "OLI_TIRS",
+        "c:description": "Landsat data processed to surface reflectance on the espa platform",
+        "eo:spacecraft": "LANDSAT_8",
+        "eo:cloud_cover": 9.77,
+        "landsat:wrs_row": "46",
+        "landsat:wrs_path": "28",
+        "eo:processing_level": "L1"
+    }
+},
+{
+    "id": "LC08_L1TP_028045_20171121_20171206_01_T1",
+    "bbox": [
+        -102.67498,
+        20.58663,
+        -100.40693,
+        22.74592
+    ],
+    "type": "Feature",
+    "assets": {
+        "nir": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band5.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "red": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band4.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "blue": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band2.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "green": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band3.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir1": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band6.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir2": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_sr_band7.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "metadata": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1.xml",
+            "type": "xml"
+        },
+        "pixel_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_pixel_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "radsat_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017112101T1-SC20171213123932/LC08_L1TP_028045_20171121_20171206_01_T1_radsat_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        }
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -102.67498,
+                    22.71003
+                ],
+                [
+                    -102.62155,
+                    20.58663
+                ],
+                [
+                    -100.40693,
+                    20.61885
+                ],
+                [
+                    -100.42774,
+                    22.74592
+                ],
+                [
+                    -102.67498,
+                    22.71003
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "eo:crs": "+proj=utm +zone=14",
+        "eo:gsd": 30,
+        "datetime": "2017-11-21T17:11:46Z",
+        "eo:sensor": "OLI_TIRS",
+        "c:description": "Landsat data processed to surface reflectance on the espa platform",
+        "eo:spacecraft": "LANDSAT_8",
+        "eo:cloud_cover": 0.26,
+        "landsat:wrs_row": "45",
+        "landsat:wrs_path": "28",
+        "eo:processing_level": "L1"
+    }
+},
+{
+    "id": "LC08_L1TP_028045_20171207_20171207_01_RT",
+    "bbox": [
+        -102.66908,
+        20.58404,
+        -100.40115,
+        22.74326
+    ],
+    "type": "Feature",
+    "assets": {
+        "nir": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band5.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "red": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band4.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "blue": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band2.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "green": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band3.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir1": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band6.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "swir2": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_sr_band7.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "metadata": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT.xml",
+            "type": "xml"
+        },
+        "pixel_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_pixel_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        },
+        "radsat_qa": {
+            "href": "/media/loic/data/datacube_tests/landsat_espa/LC080280452017120701RT-SC20171213124014/LC08_L1TP_028045_20171207_20171207_01_RT_radsat_qa.tif",
+            "type": "image/vnd.stac.geotiff"
+        }
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -102.66908,
+                    22.70746
+                ],
+                [
+                    -102.61574,
+                    20.58404
+                ],
+                [
+                    -100.40115,
+                    20.61619
+                ],
+                [
+                    -100.42187,
+                    22.74326
+                ],
+                [
+                    -102.66908,
+                    22.70746
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "eo:crs": "+proj=utm +zone=14",
+        "eo:gsd": 30,
+        "datetime": "2017-12-07T17:11:43Z",
+        "eo:sensor": "OLI_TIRS",
+        "c:description": "Landsat data processed to surface reflectance on the espa platform",
+        "eo:spacecraft": "LANDSAT_8",
+        "eo:cloud_cover": 3.92,
+        "landsat:wrs_row": "45",
+        "landsat:wrs_path": "28",
+        "eo:processing_level": "L1"
+    }
+}]
