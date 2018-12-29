@@ -1,5 +1,6 @@
 from jsonschema import validate
 from sqlalchemy.types import Numeric
+from shapely.geometry import shape
 
 from ministac.db import session_scope
 from ministac.models import Item, Collection
@@ -54,7 +55,7 @@ def search(collection, geom=None, startDate=None, endDate=None,
                 .join(Item.collection)\
                 .filter(Collection.name==collection)
         if geom is not None:
-            geom_wkt = shape(geom).wkt
+            geom_wkt = 'SRID=4326;%s' % shape(geom).wkt
             objects = objects.filter(Item.geom.ST_Intersects(geom_wkt))
         if startDate is not None:
             objects = objects.filter(Item.time >= startDate)
