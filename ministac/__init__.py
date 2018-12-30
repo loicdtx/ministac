@@ -67,5 +67,40 @@ def search(collection, geom=None, startDate=None, endDate=None,
         return [x.geojson for x in objects]
 
 
+def collections():
+    """Return a list of all collections registered in the database
 
+    Returns:
+        dict: A dictionary of {collection_name: collection_meta}
+    """
+    with session_scope() as session:
+        objects = session.query(Collection)
+        return {x.name:x.meta for x in objects}
+
+
+def get_collection(name):
+    """Return the requested collection
+
+    Args:
+        name (str): The name of the collection
+
+    Return:
+        dict: The metadata of the collection
+
+    Raises:
+        sqlalchemy.orm.exc.NoResultFound: if no result correspond to the request
+    """
+    with session_scope() as session:
+        obj = session.query(Collection).filter_by(name=name).one()
+        return obj.meta
+
+
+def get_item(collection, item):
+    with session_scope() as session:
+        obj = session.query(Item)\
+                .join(Item.collection)\
+                .filter(Collection.name==collection)\
+                .filter(Item.name==item)\
+                .one()
+        return obj.meta
 
