@@ -60,7 +60,7 @@ def search(collection, geom=None, startDate=None, endDate=None,
         if startDate is not None:
             objects = objects.filter(Item.time >= startDate)
         if endDate is not None:
-            objects = objects.filter(Item.time >= endDate)
+            objects = objects.filter(Item.time <= endDate)
         if maxCloudCover is not None:
             objects = objects.filter(Item.meta['properties']['eo:cloud_cover']\
                                      .astext.cast(Numeric) <= maxCloudCover)
