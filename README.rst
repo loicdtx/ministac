@@ -118,5 +118,5 @@ Ackowledgements
 This project received funding from `CONABIO <https://www.gob.mx/conabio>`_ (Mexico's national commission for biodiversity research).
 
 .. image:: https://www.conecto.mx/file/2016/10/Conabio2015-2.png
-   :scale: 25 %
+   :scale: 10 %
    :target: https://www.gob.mx/conabio
