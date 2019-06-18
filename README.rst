@@ -119,4 +119,4 @@ This project received funding from `CONABIO <https://www.gob.mx/conabio>`_ (Mexi
 
 .. raw:: html
 
-    <img src="https://www.conecto.mx/file/2016/10/Conabio2015-2.png" height="300px">
+    <img src="https://www.conecto.mx/file/2016/10/Conabio2015-2.png" width="300px">
