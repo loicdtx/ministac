@@ -27,5 +27,5 @@ setup(name='ministac',
           'sqlalchemy',
           'shapely',
           'jsonschema',
-          'psycopg2'
+          'psycopg2-binary'
       ])

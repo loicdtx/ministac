@@ -40,6 +40,14 @@ Database
 - Install postgresql and PostGIS
 - Create the ministac database
 - Enable PostGIS extension for the ministac database
+
+.. code-block:: bash
+
+    createdb ministac
+    psql ministac -c "CREATE EXTENSION postgis;"
+    psql ministac -c "CREATE EXTENSION postgis_topology;"
+    # Optionally create dedicated user (probably better for remote access)
+    psql ministac -c "CREATE USER ministac_user WITH PASSWORD 'qwerty' CREATEDB;"
   
 
 Configuration file
