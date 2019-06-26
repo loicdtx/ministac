@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine.url import URL
 
 from ministac.globals import DB_DATABASE, DB_HOSTNAME, DB_PASSWORD, DB_USERNAME
+from ministac.globals import DB_PORT
 
 db_params = {'drivername': 'postgresql',
              'database': DB_DATABASE,
