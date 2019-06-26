@@ -63,6 +63,7 @@ The configuration file must be named ``~/.ministac``; it contains the database a
     # db_hostname=
     # db_username=
     # db_password=
+    # db_port=
 
 Usage
 =====

@@ -11,6 +11,7 @@ db_params = {'drivername': 'postgresql',
              'database': DB_DATABASE,
              'username': DB_USERNAME,
              'host': DB_HOSTNAME,
+             'port': DB_PORT,
              'password': DB_PASSWORD}
 
 db_url = URL(**db_params)
