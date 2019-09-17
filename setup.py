@@ -22,10 +22,11 @@ setup(name='ministac',
       author_email='loic.dutrieux@conabio.gob.mx',
       license='GPLv3',
       packages=find_packages(),
+      include_package_data=True,
       install_requires=[
           'geoalchemy2',
           'sqlalchemy',
           'shapely',
           'jsonschema',
-          'psycopg2'
+          'psycopg2-binary'
       ])

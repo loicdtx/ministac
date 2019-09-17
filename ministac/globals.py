@@ -12,6 +12,7 @@ DB_DATABASE = config['ministac'].get('db_database', None)
 DB_HOSTNAME = config['ministac'].get('db_hostname', None)
 DB_USERNAME = config['ministac'].get('db_username', None)
 DB_PASSWORD = config['ministac'].get('db_password', None)
+DB_PORT = config['ministac'].get('db_port', None)
 
 ITEM_SCHEMA = json.loads(pkgutil.get_data('ministac', 'schemas/item.json'))
 

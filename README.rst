@@ -40,6 +40,14 @@ Database
 - Install postgresql and PostGIS
 - Create the ministac database
 - Enable PostGIS extension for the ministac database
+
+.. code-block:: bash
+
+    createdb ministac
+    psql ministac -c "CREATE EXTENSION postgis;"
+    psql ministac -c "CREATE EXTENSION postgis_topology;"
+    # Optionally create dedicated user (probably better for remote access)
+    psql ministac -c "CREATE USER ministac_user WITH PASSWORD 'qwerty' CREATEDB;"
   
 
 Configuration file
@@ -55,6 +63,7 @@ The configuration file must be named ``~/.ministac``; it contains the database a
     # db_hostname=
     # db_username=
     # db_password=
+    # db_port=
 
 Usage
 =====
@@ -117,6 +126,6 @@ Ackowledgements
 
 This project received funding from `CONABIO <https://www.gob.mx/conabio>`_ (Mexico's national commission for biodiversity research).
 
-.. image:: https://www.conecto.mx/file/2016/10/Conabio2015-2.png
-   :scale: 25 %
-   :target: https://www.gob.mx/conabio
+.. raw:: html
+
+    <img src="https://www.conecto.mx/file/2016/10/Conabio2015-2.png" width="300px">
