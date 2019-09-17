@@ -12,6 +12,7 @@ def add_items(session, items, collection):
     """Add one or many items to the database
 
     Args:
+        session: A database session (see ministac.db.session_scope)
         item (dict or list): The item to add, or list of items
         collection (str): The name of the collection
     """
@@ -27,6 +28,7 @@ def add_collection(session, collection):
     """Add a new collection to the database
 
     Args:
+        session: A database session (see ministac.db.session_scope)
         collection (dict): The collection to add
     """
     validate(collection, COLLECTION_SCHEMA)
@@ -40,6 +42,7 @@ def search(session, collection, geom=None, startDate=None, endDate=None,
     """Query the database for matching items
 
     Args:
+        session: A database session (see ministac.db.session_scope)
         collection (str): The name of the collection to query
         geom (dict): A geojson like geometry
         startDate (datetime.datetime): Begin date
@@ -66,6 +69,9 @@ def search(session, collection, geom=None, startDate=None, endDate=None,
 def collections(session):
     """Return a list of all collections registered in the database
 
+    Args:
+        session: A database session (see ministac.db.session_scope)
+
     Returns:
         dict: A dictionary of {collection_name: collection_meta}
     """
@@ -77,6 +83,7 @@ def get_collection(session, name):
     """Return the requested collection
 
     Args:
+        session: A database session (see ministac.db.session_scope)
         name (str): The name of the collection
 
     Return:
