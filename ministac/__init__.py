@@ -2,14 +2,13 @@ from jsonschema import validate
 from sqlalchemy.types import Numeric
 from shapely.geometry import shape
 
-from ministac.db import session_scope
 from ministac.models import Item, Collection
 from ministac.globals import COLLECTION_SCHEMA
 
 __version__ = '0.0.1'
 
 
-def add_items(items, collection):
+def add_items(session, items, collection):
     """Add one or many items to the database
 
     Args:
@@ -18,14 +17,13 @@ def add_items(items, collection):
     """
     if not isinstance(items, list):
         items = [items]
-    with session_scope() as session:
-        collection = session.query(Collection).filter_by(name=collection).first()
-        item_list = [Item.from_geojson(feature=x, collection=collection)
-                     for x in items]
-        session.add_all(item_list)
+    collection = session.query(Collection).filter_by(name=collection).first()
+    item_list = [Item.from_geojson(feature=x, collection=collection)
+                 for x in items]
+    session.add_all(item_list)
 
 
-def add_collection(collection):
+def add_collection(session, collection):
     """Add a new collection to the database
 
     Args:
@@ -34,11 +32,10 @@ def add_collection(collection):
     validate(collection, COLLECTION_SCHEMA)
     collection_obj = Collection(name=collection['id'],
                                 meta=collection)
-    with session_scope() as session:
-        session.add(collection_obj)
+    session.add(collection_obj)
 
 
-def search(collection, geom=None, startDate=None, endDate=None,
+def search(session, collection, geom=None, startDate=None, endDate=None,
            maxCloudCover=None):
     """Query the database for matching items
 
@@ -50,35 +47,33 @@ def search(collection, geom=None, startDate=None, endDate=None,
         maxCloudCover (float): Maximum cloud cover allowed in percent (value
             between 0 and 100)
     """
-    with session_scope() as session:
-        objects = session.query(Item)\
-                .join(Item.collection)\
-                .filter(Collection.name==collection)
-        if geom is not None:
-            geom_wkt = 'SRID=4326;%s' % shape(geom).wkt
-            objects = objects.filter(Item.geom.ST_Intersects(geom_wkt))
-        if startDate is not None:
-            objects = objects.filter(Item.time >= startDate)
-        if endDate is not None:
-            objects = objects.filter(Item.time <= endDate)
-        if maxCloudCover is not None:
-            objects = objects.filter(Item.meta['properties']['eo:cloud_cover']\
-                                     .astext.cast(Numeric) <= maxCloudCover)
-        return [x.geojson for x in objects]
+    objects = session.query(Item)\
+            .join(Item.collection)\
+            .filter(Collection.name==collection)
+    if geom is not None:
+        geom_wkt = 'SRID=4326;%s' % shape(geom).wkt
+        objects = objects.filter(Item.geom.ST_Intersects(geom_wkt))
+    if startDate is not None:
+        objects = objects.filter(Item.time >= startDate)
+    if endDate is not None:
+        objects = objects.filter(Item.time <= endDate)
+    if maxCloudCover is not None:
+        objects = objects.filter(Item.meta['properties']['eo:cloud_cover']\
+                                 .astext.cast(Numeric) <= maxCloudCover)
+    return [x.geojson for x in objects]
 
 
-def collections():
+def collections(session):
     """Return a list of all collections registered in the database
 
     Returns:
         dict: A dictionary of {collection_name: collection_meta}
     """
-    with session_scope() as session:
-        objects = session.query(Collection)
-        return {x.name:x.meta for x in objects}
+    objects = session.query(Collection)
+    return {x.name:x.meta for x in objects}
 
 
-def get_collection(name):
+def get_collection(session, name):
     """Return the requested collection
 
     Args:
@@ -90,17 +85,15 @@ def get_collection(name):
     Raises:
         sqlalchemy.orm.exc.NoResultFound: if no result correspond to the request
     """
-    with session_scope() as session:
-        obj = session.query(Collection).filter_by(name=name).one()
-        return obj.meta
+    obj = session.query(Collection).filter_by(name=name).one()
+    return obj.meta
 
 
-def get_item(collection, item):
-    with session_scope() as session:
-        obj = session.query(Item)\
-                .join(Item.collection)\
-                .filter(Collection.name==collection)\
-                .filter(Item.name==item)\
-                .one()
-        return obj.meta
+def get_item(session, collection, item):
+    obj = session.query(Item)\
+            .join(Item.collection)\
+            .filter(Collection.name==collection)\
+            .filter(Item.name==item)\
+            .one()
+    return obj.meta
 
