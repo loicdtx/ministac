@@ -5,7 +5,7 @@ from shapely.geometry import shape
 from ministac.models import Item, Collection
 from ministac.globals import COLLECTION_SCHEMA
 
-__version__ = '0.0.1'
+__version__ = '0.2.0'
 
 
 def add_items(session, items, collection):

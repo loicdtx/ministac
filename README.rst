@@ -77,7 +77,7 @@ Although ministac has a functional API, most common use cases are probably cover
     import datetime as dt
 
     import ministac
-    from ministac.db import init_db
+    from ministac.db import init_db, session_scope
 
     
     # Create database tables
@@ -88,14 +88,16 @@ Although ministac has a functional API, most common use cases are probably cover
         landsat_8_collection = json.load(src)
 
     # Register the Landsat 8 collection to the database
-    ministac.add_collection(landsat_8_collection)
+    with session_scope() as session:
+        ministac.add_collection(session, landsat_8_collection)
 
     # Read some example items
     with open('tests/data/item_list.json') as src:
         item_list = json.load(src)
 
     # Ingest the items to the database
-    ministac.add_items(item_list, 'landsat_sr_8')
+    with session_scope() as session:
+        ministac.add_items(session, item_list, 'landsat_sr_8')
 
 
     # Query the entire landsat_sr_8 collection 
@@ -103,7 +105,8 @@ Although ministac has a functional API, most common use cases are probably cover
 
     # Add temporal filter
     startDate = dt.datetime(2017, 12, 1)
-    pprint(ministac.search('landsat_sr_8', startDate=startDate))
+    with session_scope() as session:
+        pprint(ministac.search(session, 'landsat_sr_8', startDate=startDate))
 
     # Spatial filter
     geom = {'coordinates': [[[-101.7, 19.59],
@@ -116,10 +119,13 @@ Although ministac has a functional API, most common use cases are probably cover
                              [-101.64, 19.64],
                              [-101.7, 19.59]]],
             'type': 'Polygon'}
-    pprint(ministac.search('landsat_sr_8', geom=geom))
+
+    with session_scope() as session:
+        pprint(ministac.search(session, 'landsat_sr_8', geom=geom))
 
     # Filter with cloud cover threshold
-    pprint(ministac.search('landsat_sr_8', maxCloudCover=20))
+    with session_scope() as session:
+        pprint(ministac.search(session, 'landsat_sr_8', maxCloudCover=20))
 
 Ackowledgements
 ===============
