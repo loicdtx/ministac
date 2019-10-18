@@ -101,7 +101,8 @@ Although ministac has a functional API, most common use cases are probably cover
 
 
     # Query the entire landsat_sr_8 collection 
-    pprint(ministac.search('landsat_sr_8'))
+    with session_scope() as session:
+            pprint(ministac.search(session, 'landsat_sr_8'))
 
     # Add temporal filter
     startDate = dt.datetime(2017, 12, 1)
