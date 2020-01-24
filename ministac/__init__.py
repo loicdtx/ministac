@@ -63,7 +63,8 @@ def search(session, collection, geom=None, startDate=None, endDate=None,
     if maxCloudCover is not None:
         objects = objects.filter(Item.meta['properties']['eo:cloud_cover']\
                                  .astext.cast(Numeric) <= maxCloudCover)
-    return [x.geojson for x in objects]
+    return {'features': [x.geojson for x in objects],
+            'type': 'FeatureCollection'}
 
 
 def collections(session):
